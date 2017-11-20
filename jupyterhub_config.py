@@ -36,7 +36,11 @@
 
 ## An Application for starting a Multi-User Jupyter Notebook server.
 
+<<<<<<< HEAD
 from dockerspawner import DockerSpawner
+=======
+#from dockerspawner import DockerSpawner
+>>>>>>> 3647b3fe6f5fbd82cf601991f84daaf86dbd3f93
 #import netifaces
 #docker0 = netifaces.ifaddresses('docker0')
 #docker0_ipv4 = docker0[netifaces.AF_INET][0]
@@ -45,13 +49,18 @@ from dockerspawner import DockerSpawner
 c = get_config()
 #c.JupyterHub.spawner_class = 'batchspawner.TorqueSpawner'
 
+<<<<<<< HEAD
 c.DockerSpawner.remove_containers = True
+=======
+#c.DockerSpawner.remove_containers = True
+>>>>>>> 3647b3fe6f5fbd82cf601991f84daaf86dbd3f93
 
 c.JupyterHub.log_level = 'DEBUG'
 
 #c.DockerSpawner.extra_create_kwargs = {"command": 'env PATH="/opt/conda/bin" /opt/conda/bin/start-singleuser.sh'}
 #c.SystemUserSpawner.host_homedir_format_string = '/home/{username}'
 
+<<<<<<< HEAD
 
 #c.Spawner.cmd = ['/usr/local/bin/']
 
@@ -63,11 +72,27 @@ c.JupyterHub.authenticator_class = 'oauthenticator.GitHubOAuthenticator'
 c.GitHubOAuthenticator.oauth_callback_url = 'http://lab.vatnani.com:8000/hub/oauth_callback'
 c.GitHubOAuthenticator.client_id = '947164ee4ecccec9ad99'
 c.GitHubOAuthenticator.client_secret = '077926f7d433ecdad2708ed54d298e7cd649318e'
+=======
+#c.Spawner.cmd = ['/usr/local/bin/']
+
+#c.DockerSpawner.extra_create_kwargs = {
+#    "command": 'env PATH="~/anaconda4/bin:$PATH" /usr/local/bin/start-singleuser.sh',
+#}
+
+#c.JupyterHub.authenticator_class = 'oauthenticator.GitHubOAuthenticator'
+#c.GitHubOAuthenticator.oauth_callback_url = 'http://myfullerton.tech:8000/hub/oauth_callback'
+#c.GitHubOAuthenticator.client_id = '947164ee4ecccec9ad99'
+#c.GitHubOAuthenticator.client_secret = '077926f7d433ecdad2708ed54d298e7cd649318e'
+>>>>>>> 3647b3fe6f5fbd82cf601991f84daaf86dbd3f93
 #c.LocalAuthenticator.create_system_users = True
 c.Authenticator.whitelist = {'vishalvsparrow', 'vishal', 'haircompounds', 'milauniraval'}
 c.Authenticator.admin_users = {'vishalvsparrow'}
 #c.Spawner.notebook_dir = '~/notebooks'
+<<<<<<< HEAD
 c.JupyterHub.spawner_class = DockerSpawner
+=======
+#c.JupyterHub.spawner_class = DockerSpawner
+>>>>>>> 3647b3fe6f5fbd82cf601991f84daaf86dbd3f93
 #####################DOES NOT WORK ##########################
 #c.JupyterHub.ssl_cert = 'mycert.pem'
 #c.JupyterHub.ssl_key = 'mykey.key'
@@ -80,6 +105,7 @@ c.JupyterHub.cookie_secret_file = 'jupyterhub_cookie_secret'
 #c.Spawner.default_url = '/home/%U'
 
 
+<<<<<<< HEAD
 # must start container as root in order to grant sudo permissions
 #c.DockerSpawner.extra_create_kwargs = {'user': 'root'}
 #c.DockerSpawner.environment = {
@@ -93,6 +119,10 @@ c.JupyterHub.cookie_secret_file = 'jupyterhub_cookie_secret'
 
 #c.JupyterHub.hub_ip = "0.0.0.0"
 DockerSpawner.container_image = 'jupyter/base-notebook'
+=======
+#c.JupyterHub.hub_ip = "0.0.0.0"
+#DockerSpawner.container_image = 'jupyterhub/singleusers'
+>>>>>>> 3647b3fe6f5fbd82cf601991f84daaf86dbd3f93
 #c.DockerSpawner.host_ip = "0.0.0.0"
 #c.LocalAuthenticator.create_system_users = True
 
